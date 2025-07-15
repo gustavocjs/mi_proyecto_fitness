@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Contenido Premium - {{ plan.nombre }}{% endblock %}
+{% block content %}
+<h2>Contenido Premium para {{ plan.nombre }}</h2>
+<p>Gracias por adquirir el plan. Aquí tienes acceso exclusivo a:</p>
+
+{% if plan.nombre == 'Plan Rutinas' %}
+<ul>
+    <li>Rutina Full Body</li>
+    <li>División Push/Pull</li>
+    <li>Rutina Avanzada de definición</li>
+</ul>
+{% elif plan.nombre == 'Plan Nutrición' %}
+<ul>
+    <li>Planes personalizados de comidas</li>
+    <li>Recetas saludables</li>
+    <li>Guía de macronutrientes y suplementos</li>
+</ul>
+{% elif plan.nombre == 'Plan Blog Premium' %}
+<ul>
+    <li>Artículos exclusivos</li>
+    <li>Tips avanzados de suplementación</li>
+    <li>Acceso a videos y entrevistas</li>
+</ul>
+{% endif %}
+
+<h3>Contacto directo:</h3>
+<p>Gustavo Diaz</p>
+<p>Email: gustavo@fitness.com</p>
+
+{% endblock %}

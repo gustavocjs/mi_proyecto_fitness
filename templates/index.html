@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fitness con Gustavo - Planes</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <meta charset="UTF-8">
+    <title>Warriors Fit - Planes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>Fitness con Gustavo</h1>
+        <h1>Warriors Fit</h1>
         <p>Elegí tu plan ideal para transformar tu cuerpo</p>
     </header>
 
@@ -26,13 +25,10 @@
         <section class="planes">
             {% for plan in planes %}
             <div class="plan">
-                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}" alt="Imagen {{ plan.nombre }}" class="section-img" />
-                <div class="content">
-                    <h2>{{ plan.nombre }}</h2>
-                    <p class="precio">{{ plan.precio }}</p>
-                    <p>{{ plan.descripcion }}</p>
-                    <a href="{{ url_for('plan_detail', plan_id=plan.id) }}" class="btn">Ver más</a>
-                </div>
+                <h2>{{ plan.nombre }}</h2>
+                <p class="precio">{{ plan.precio }}</p>
+                <p>{{ plan.descripcion }}</p>
+                <a href="{{ url_for('plan_detail', plan_id=plan.id) }}" class="btn">Ver más</a>
             </div>
             {% endfor %}
         </section>
@@ -40,8 +36,8 @@
         <section id="contacto">
             <h2>Contacto</h2>
             <form method="post" action="{{ url_for('contacto') }}">
-                <input type="text" name="nombre" placeholder="Tu nombre" required />
-                <input type="email" name="email" placeholder="Tu email" required />
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu email" required>
                 <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
@@ -49,7 +45,7 @@
     </main>
 
     <footer>
-        <p>© 2025 Fitness con Gustavo. Todos los derechos reservados.</p>
+        <p>© 2025 Warriors Fit. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

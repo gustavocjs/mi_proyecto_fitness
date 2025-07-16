@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% block title %}Fitness con Gustavo{% endblock %}</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Warriors Fit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-<header>
-    <h1>Fitness con Gustavo</h1>
-    <nav>
-        <a href="{{ url_for('index') }}">Inicio</a>
-        <a href="{{ url_for('plan', plan_id='rutinas') }}">Rutinas</a>
-        <a href="{{ url_for('plan', plan_id='nutricion') }}">Nutrición</a>
-        <a href="{{ url_for('plan', plan_id='blog') }}">Blog</a>
-    </nav>
-</header>
-<main>
+    <header>
+        <h1>Warriors Fit</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
     {% block content %}{% endblock %}
-</main>
-<footer>
-    <p>© 2025 Fitness con Gustavo - Todos los derechos reservados.</p>
-</footer>
+
+    <footer>
+        <p>© 2025 Warriors Fit. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

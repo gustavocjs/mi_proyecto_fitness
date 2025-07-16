@@ -18,28 +18,4 @@
             <p>{{ message }}</p>
           {% endfor %}
         </div>
-      {% endif %}
-    {% endwith %}
-
-    <main>
-        <section class="planes">
-            {% for plan in planes %}
-            <div class="plan">
-                <h2>{{ plan.nombre }}</h2>
-
-                {% if plan.nombre == 'Básico' %}
-                    <img src="{{ url_for('static', filename='img/basico.jpg') }}" alt="Plan Básico" style="width:300px;">
-                {% elif plan.nombre == 'Premium' %}
-                    <img src="{{ url_for('static', filename='img/premium.jpg') }}" alt="Plan Premium" style="width:300px;">
-                {% else %}
-                    <img src="{{ url_for('static', filename='img/otros.jpg') }}" alt="{{ plan.nombre }}" style="width:300px;">
-                {% endif %}
-
-                <p>{{ plan.descripcion }}</p>
-                <p>Precio: {{ plan.precio }}</p>
-            </div>
-            {% endfor %}
-        </section>
-    </main>
-</body>
-</html>
+      {% e

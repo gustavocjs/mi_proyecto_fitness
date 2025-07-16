@@ -18,4 +18,12 @@
             <p>{{ message }}</p>
           {% endfor %}
         </div>
-      {% e
+      {% endif %}
+    {% endwith %}
+
+    <main>
+        <section class="planes">
+            {% for plan in planes %}
+            <div class="plan">
+                <h2>{{ plan.nombre }}</h2>
+                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}"_

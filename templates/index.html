@@ -24,11 +24,13 @@
     <main>
         <section class="planes">
             {% for plan in planes %}
-            <div class="plan">
-                <h2>{{ plan.nombre }}</h2>
-                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}" alt="{{ plan.nombre }}" style="width:300px;">
-                <p>{{ plan.descripcion }}</p>
-                <p>Precio: {{ plan.precio }}</p>
+            <div class="plan-card">
+                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}" alt="{{ plan.nombre }}">
+                <div class="plan-info">
+                    <h2>{{ plan.nombre }}</h2>
+                    <p>{{ plan.descripcion }}</p>
+                    <p class="precio">{{ plan.precio }}</p>
+                </div>
             </div>
             {% endfor %}
         </section>

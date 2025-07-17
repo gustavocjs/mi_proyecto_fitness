@@ -26,4 +26,12 @@
             {% for plan in planes %}
             <div class="plan">
                 <h2>{{ plan.nombre }}</h2>
-                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}"_
+                <img src="{{ url_for('static', filename='img/' + plan.id + '.jpg') }}" alt="{{ plan.nombre }}" style="width:300px;">
+                <p>{{ plan.descripcion }}</p>
+                <p>Precio: {{ plan.precio }}</p>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>
